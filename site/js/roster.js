@@ -8,17 +8,30 @@ async function loadRoster() {
     const { artists } = await response.json();
 
     container.innerHTML = artists.map((artist) => `
-      <article class="catalogue-row" id="artist-${artist.id}">
-        <span class="cat-num">${artist.catalogNumber}</span>
-        <span class="cat-artist">${artist.name}</span>
-        <span class="cat-genre">${artist.genre}</span>
-        <span class="cat-side">${artist.side}</span>
-        <p class="cat-note">${artist.note}</p>
+      <article class="roster-card" id="artist-${artist.id}">
+        <div class="roster-photo-wrap">
+          <img
+            class="roster-photo"
+            src="${artist.image}"
+            alt="${artist.name}"
+            loading="lazy"
+            width="400"
+            height="400"
+          >
+          <span class="roster-side">${artist.side}</span>
+        </div>
+        <div class="roster-card-body">
+          <span class="roster-catalog">${artist.catalogNumber}</span>
+          <h3 class="roster-name">${artist.name}</h3>
+          <p class="roster-genre">${artist.genre}</p>
+          ${artist.latestRelease ? `<p class="roster-release"><em>${artist.latestRelease}</em></p>` : ''}
+          <p class="roster-note">${artist.note}</p>
+        </div>
       </article>
     `).join('');
   } catch (error) {
     container.innerHTML = `
-      <p class="cat-note" style="grid-column: 1 / -1; padding: 1rem 0;">
+      <p class="roster-error">
         Catalogue unavailable — check data/roster.json.
       </p>
     `;
