@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inner Soul Record — Violet Vinyl</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="style-label">Style 13 — Violet Vinyl</div>
+
+  <nav class="site-nav" id="nav">
+    <a href="#" class="logo"><span class="logo-dot"></span> Inner Soul Record</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#roster"><span class="num">01</span>Roster</a></li>
+      <li><a href="#dreamin"><span class="num">02</span>Dreamin' Indie</a></li>
+      <li><a href="#publishing"><span class="num">03</span>Publishing</a></li>
+      <li><a href="#live"><span class="num">04</span>Live</a></li>
+    </ul>
+    <span class="nav-meta">Cat. ISR-001 · 33⅓</span>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">Menu</button>
+  </nav>
+
+  <header class="hero" id="top">
+    <span class="hero-side-label">Side A — Listening Room</span>
+    <div class="hero-copy">
+      <p class="hero-eyebrow">Independent catalogue · After midnight</p>
+      <h1>Inner<br>Soul<br>Record</h1>
+      <p class="hero-tagline">Records for rooms that stay lit after midnight. A small label for singers, duos, and the people who still sit through the B-side.</p>
+      <p class="hero-footnote">Est. in the small hours · Pressed, not streamed first</p>
+    </div>
+    <div class="hero-vinyl" aria-hidden="true">
+      <div class="turntable">
+        <div class="platter">
+          <div class="label-disc">
+            <span class="isr">ISR 001</span>
+            <span class="side">Side A</span>
+          </div>
+        </div>
+        <div class="tonearm">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M170 30 L120 90 L95 110" stroke="#999" stroke-width="2" fill="none"/>
+            <circle class="head" cx="95" cy="110" r="6"/>
+            <circle cx="170" cy="30" r="8" fill="#666" stroke="#888"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee">
+      <span>Mei Ling Chan — <em>Last Call in Sheung Wan</em></span>
+      <span>Kai Rivera — <em>Sham Shui Nights</em></span>
+      <span>Amina Hassan — <em>Cyan After Midnight</em></span>
+      <span>Jun Park — <em>Neon Stall</em></span>
+      <span>Sofia Berg — <em>Dust in the Light</em></span>
+      <span>Leo Tam — <em>Golden Hour, TST</em></span>
+      <span>Nia Okonkwo — <em>Keep the Lights Low</em></span>
+      <span>Ryo Nakamura — <em>Left Hand Ride</em></span>
+      <span>Tess Wong — <em>Tin Hau After Rain</em></span>
+      <span>Hassan Malik — <em>Last Set at Hidden Agenda</em></span>
+      <span>Daniel Ho — <em>Night Bus 1A</em></span>
+      <span>Clara Ip — <em>Harbour Harmonic</em></span>
+      <span>Martin Sham — <em>After the Desk Closes</em></span>
+      <span>Sin Lam — <em>Lantern Over Lai Chi Kok</em></span>
+      <span>Mei Ling Chan — <em>Last Call in Sheung Wan</em></span>
+      <span>Kai Rivera — <em>Sham Shui Nights</em></span>
+      <span>Amina Hassan — <em>Cyan After Midnight</em></span>
+      <span>Jun Park — <em>Neon Stall</em></span>
+      <span>Sofia Berg — <em>Dust in the Light</em></span>
+      <span>Leo Tam — <em>Golden Hour, TST</em></span>
+      <span>Nia Okonkwo — <em>Keep the Lights Low</em></span>
+      <span>Ryo Nakamura — <em>Left Hand Ride</em></span>
+      <span>Tess Wong — <em>Tin Hau After Rain</em></span>
+      <span>Hassan Malik — <em>Last Set at Hidden Agenda</em></span>
+      <span>Daniel Ho — <em>Night Bus 1A</em></span>
+      <span>Clara Ip — <em>Harbour Harmonic</em></span>
+      <span>Martin Sham — <em>After the Desk Closes</em></span>
+      <span>Sin Lam — <em>Lantern Over Lai Chi Kok</em></span>
+    </div>
+  </div>
+
+  <section id="roster">
+    <div class="section-inner">
+      <div class="section-rule"></div>
+      <p class="section-label">Catalogue · Side A</p>
+      <h2 class="section-title">The roster</h2>
+      <p class="section-desc">Fifteen artists on wax. Each entry indexed in the ISR catalogue — genre, side, and a note from the sleeve.</p>
+
+      <div class="catalogue-header">
+        <span>No.</span>
+        <span>Artist</span>
+        <span>Genre</span>
+        <span>Side</span>
+      </div>
+
+      <div id="roster-entries" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="dreamin">
+    <div class="section-inner">
+      <div class="section-rule"></div>
+      <p class="section-label">Insert · Side B</p>
+      <h2 class="section-title">Dreamin' Indie</h2>
+      <div class="dreamin-layout">
+        <div>
+          <blockquote class="dreamin-quote">
+            "You are what you listen to — but only if someone else is in the room with you."
+            <cite>— Liner note, Dreamin' Indie Vol. 1</cite>
+          </blockquote>
+          <span class="dreamin-badge">● Rooms open after midnight</span>
+        </div>
+        <ul class="dreamin-list">
+          <li>
+            <span class="idx">01</span>
+            <div>
+              <h4>Listening rooms</h4>
+              <p>Synchronized playback. One queue, many headphones. No algorithm — just the room's pick, spun in real time.</p>
+            </div>
+          </li>
+          <li>
+            <span class="idx">02</span>
+            <div>
+              <h4>Collabs</h4>
+              <p>Swap demos, find co-writers, post voice memos at 3 AM. Feedback before the master, not after the stream.</p>
+            </div>
+          </li>
+          <li>
+            <span class="idx">03</span>
+            <div>
+              <h4>Listening parties</h4>
+              <p>Release nights, deep-cut marathons, city-to-city listening sessions. Show bills pasted to the virtual wall.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="publishing">
+    <div class="section-inner">
+      <div class="section-rule"></div>
+      <p class="section-label">Liner notes · Administration</p>
+      <h2 class="section-title">Music publishing</h2>
+      <p class="playbill-intro">"We keep the paperwork quiet so you can stay in the room. Every track indexed, every royalty accounted for — like session notes in the margin."</p>
+      <div class="playbill-columns">
+        <div class="playbill-col">
+          <h4>Administration</h4>
+          <p>Registration, royalty collection, quarterly statements. Every track indexed in our catalogue with ISRC and session metadata.</p>
+        </div>
+        <div class="playbill-col">
+          <h4>Sync & licensing</h4>
+          <p>Film, TV, ads, games. We pitch with context — not just stems, but the story behind the song.</p>
+        </div>
+        <div class="playbill-col">
+          <h4>Mechanical</h4>
+          <p>Covers, samples, physical pressings. Clearances tracked like outtakes — nothing lost in the vault.</p>
+        </div>
+      </div>
+      <div class="liner-notes">
+        <h5>Recent catalogue entries</h5>
+        <p><span class="highlight">ISR-014</span> "Glass Orchard" — vocal comp approved, pending mix notes</p>
+        <p><span class="highlight">ISR-021</span> "Static Hymn" — sync inquiry: indie drama, option expires Oct 1</p>
+        <p><span class="highlight">ISR-009</span> "Blue Hour Demo" — mechanical filed, streaming live Friday</p>
+        <p><span class="highlight">ISR-027</span> "Violet Floor" — live recording prepped for archive</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="live">
+    <div class="section-inner">
+      <div class="section-rule"></div>
+      <p class="section-label">Playbill · On stage</p>
+      <h2 class="section-title">Live performances</h2>
+      <p class="section-desc">Real rooms, real boards. Every show is a session — doors at eight, last call at midnight.</p>
+      <div class="live-playbill">
+        <article class="live-entry">
+          <div class="live-date"><span class="day">22</span><span class="month">Sep · Portland</span></div>
+          <div class="live-info">
+            <h4>Night Orchard — "Violet Floor" release night</h4>
+            <p>Mississippi Studios · with The Hollow Hours</p>
+          </div>
+          <span class="live-tag">Doors 8 PM</span>
+        </article>
+        <article class="live-entry">
+          <div class="live-date"><span class="day">04</span><span class="month">Oct · Brooklyn</span></div>
+          <div class="live-info">
+            <h4>Lila Voss — acoustic session + Q&amp;A</h4>
+            <p>Baby's All Right · doors 7:30, set 8:15</p>
+          </div>
+          <span class="live-tag">Intimate set</span>
+        </article>
+        <article class="live-entry">
+          <div class="live-date"><span class="day">18</span><span class="month">Oct · LA</span></div>
+          <div class="live-info">
+            <h4>Junio Park — bedroom pop, full band</h4>
+            <p>The Echo · Dreamin' Indie member presale live</p>
+          </div>
+          <span class="live-tag">Full band</span>
+        </article>
+        <article class="live-entry">
+          <div class="live-date"><span class="day">02</span><span class="month">Nov · Chicago</span></div>
+          <div class="live-info">
+            <h4>ISR Roster Night — four sets, one room</h4>
+            <p>Empty Bottle · all four artists, no headliner</p>
+          </div>
+          <span class="live-tag">All roster</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h2>Inner Soul Record</h2>
+        <p>Indie label for artists who treat every release like a midnight session. Publishing, live, and a community that stays up late.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Catalogue</h5>
+        <ul>
+          <li><a href="#roster">Roster</a></li>
+          <li><a href="#dreamin">Dreamin' Indie</a></li>
+          <li><a href="#publishing">Publishing</a></li>
+          <li><a href="#live">Live</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@innersoulrecord.com">hello@innersoulrecord.com</a></li>
+          <li><a href="#">Press kit</a></li>
+          <li><a href="#">Demo submission</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Inner Soul Record</span>
+      <span>Style 13 — Violet Vinyl</span>
+    </div>
+  </footer>
+
+  <script src="js/roster.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
