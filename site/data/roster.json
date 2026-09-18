@@ -1,152 +1,23 @@
 {
   "artists": [
     {
-      "id": "mei",
-      "name": "Mei Ling Chan",
-      "genre": "Jazz · Soul",
-      "catalogNumber": "ISR-001",
-      "side": "A · 01",
-      "note": "Sings standards like they still owe her something. Residencies at small rooms off Hollywood Road, a voice that sits just behind the beat.",
-      "latestRelease": "Last Call in Sheung Wan",
-      "image": "assets/artists/mei.jpg"
-    },
-    {
-      "id": "kai",
-      "name": "Kai Rivera",
-      "genre": "Indie · Rock",
-      "catalogNumber": "ISR-002",
-      "side": "A · 02",
-      "note": "Writes songs in the back of a rehearsal warehouse and plays them like the walls might answer. Looking for a rhythm section that actually listens.",
-      "latestRelease": "Sham Shui Nights",
-      "image": "assets/artists/kai.jpg"
-    },
-    {
-      "id": "amina",
-      "name": "Amina Hassan",
-      "genre": "Electronic · Ambient",
-      "catalogNumber": "ISR-003",
-      "side": "A · 03",
-      "note": "Builds tracks from field recordings and a stubborn analogue synth. Available for film cues, late rooftops, and anyone who still likes a long intro.",
-      "latestRelease": "Cyan After Midnight",
-      "image": "assets/artists/amina.jpg"
-    },
-    {
-      "id": "jun",
-      "name": "Jun Park",
-      "genre": "Hip-hop · R&B",
-      "catalogNumber": "ISR-004",
-      "side": "A · 04",
-      "note": "Writes in two languages and performs in one breath. Night-market cadence, studio discipline. Open to features that don’t sand him down.",
-      "latestRelease": "Neon Stall",
-      "image": "assets/artists/jun.jpg"
-    },
-    {
-      "id": "sofia",
-      "name": "Sofia Berg",
-      "genre": "Classical · Contemporary",
-      "catalogNumber": "ISR-005",
-      "side": "A · 05",
-      "note": "Recital hall by afternoon, session work by night. Interested in electronic pairings and scores that leave the cello some air.",
-      "latestRelease": "Dust in the Light",
-      "image": "assets/artists/sofia.jpg"
-    },
-    {
-      "id": "leo",
-      "name": "Leo Tam",
-      "genre": "Cantopop · Pop",
-      "catalogNumber": "ISR-006",
-      "side": "A · 06",
-      "note": "Rooftop sessions and tight live bands. Writes in Cantonese first. Looking for players who can hold a chorus without crowding it.",
-      "latestRelease": "Golden Hour, TST",
-      "image": "assets/artists/leo.jpg"
-    },
-    {
-      "id": "nia",
-      "name": "Nia Okonkwo",
-      "genre": "Soul · Jazz",
-      "catalogNumber": "ISR-007",
-      "side": "A · 07",
-      "note": "A voice built for small rooms and long notes. Sundays at The Wanch, weekdays in session. Will not do a click-track ballad unless it earns it.",
-      "latestRelease": "Keep the Lights Low",
-      "image": "assets/artists/nia.jpg"
-    },
-    {
-      "id": "ryo",
-      "name": "Ryo Nakamura",
-      "genre": "Rock · Jazz",
-      "catalogNumber": "ISR-008",
-      "side": "A · 08",
-      "note": "For hire, not for decoration. Pocket first, fills second. Available for residencies, records, and anyone tired of a drum machine.",
-      "latestRelease": "Left Hand Ride",
-      "image": "assets/artists/ryo.jpg"
-    },
-    {
-      "id": "tess",
-      "name": "Tess Wong",
-      "genre": "Indie · Folk",
-      "catalogNumber": "ISR-009",
-      "side": "B · 01",
-      "note": "Quiet songs about leaving and coming back. Plays open tunings in rooms that still have ceiling fans.",
-      "latestRelease": "Tin Hau After Rain",
-      "image": "assets/artists/tess.jpg"
-    },
-    {
-      "id": "hassan",
-      "name": "Hassan Malik",
-      "genre": "Jazz · Soul",
-      "catalogNumber": "ISR-010",
-      "side": "B · 02",
-      "note": "Horns for hire, charts on request. Prefers small rooms and players who leave space.",
-      "latestRelease": "Last Set at Hidden Agenda",
-      "image": "assets/artists/hassan.jpg"
-    },
-    {
-      "id": "yuki",
-      "name": "Yuki Cheung",
-      "genre": "Electronic · Hip-hop",
-      "catalogNumber": "ISR-011",
-      "side": "B · 03",
-      "note": "Warehouse edits and late buses home. First upload is sitting with Inner Soul for review.",
-      "image": "assets/artists/yuki.jpg"
-    },
-    {
-      "id": "daniel",
-      "name": "Daniel Ho",
-      "genre": "Hip-hop · R&B",
-      "catalogNumber": "ISR-012",
-      "side": "B · 04",
-      "note": "Makes beats in a subdivided flat and names them after minibus routes. Open to Cantonese features.",
-      "latestRelease": "Night Bus 1A",
-      "image": "assets/artists/daniel.jpg"
-    },
-    {
-      "id": "clara",
-      "name": "Clara Ip",
-      "genre": "Classical · Contemporary",
-      "catalogNumber": "ISR-013",
-      "side": "B · 05",
-      "note": "Session strings, quartet work, and the occasional pop overdub. Will not play over a loop that is already doing her job.",
-      "latestRelease": "Harbour Harmonic",
-      "image": "assets/artists/clara.jpg"
-    },
-    {
       "id": "martin",
       "name": "Martin Sham",
-      "genre": "Indie · Soul",
-      "catalogNumber": "ISR-014",
-      "side": "B · 06",
-      "note": "Runs Inner Soul Records and still writes guitar parts after the office lights go off. Looking after the roster and the room.",
-      "latestRelease": "After the Desk Closes",
+      "genre": "Hip-hop",
+      "catalogNumber": "ISR-001",
+      "side": "A · 01",
+      "note": "Runs Inner Soul Records. Looking after the roster and the app.",
+      "latestRelease": "一族夜鬼",
       "image": "assets/artists/martin.jpg"
     },
     {
       "id": "sinlam",
-      "name": "Sin Lam",
-      "genre": "Soul · Jazz",
-      "catalogNumber": "ISR-015",
-      "side": "B · 07",
-      "note": "Voice first, paperwork second. Inner Soul on weekdays, small rooms on weekends.",
-      "latestRelease": "Lantern Over Lai Chi Kok",
+      "name": "SIN 林善麟",
+      "genre": "Indie",
+      "catalogNumber": "ISR-002",
+      "side": "A · 02",
+      "note": "SIN 林善麟是香港獨立音樂人，曾參與由小克、王雙駿發起的音樂企劃《樂壇已死》而為人熟知，並於 2025 年發表首支個人單曲《成人的道別方式》正式出道。近年活躍於本地獨立音樂圈, 並經營個人YouTube Channel發表音樂作品。",
+      "latestRelease": "暖戰 | Warm War",
       "image": "assets/artists/sinlam.jpg"
     }
   ]
