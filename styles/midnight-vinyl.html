@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inner Soul Record — Midnight Vinyl</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/switcher.css" />
+  <style>
+    :root {
+      --bg: #09080b;
+      --panel: #141018;
+      --gold: #c9a86c;
+      --cream: #f3ead8;
+      --mute: #9a8f82;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--cream); }
+    body {
+      font-family: "Outfit", sans-serif;
+      background-image:
+        radial-gradient(1200px 600px at 70% -10%, rgba(201,168,108,0.12), transparent 55%),
+        radial-gradient(800px 500px at 0% 40%, rgba(90,30,60,0.25), transparent 50%);
+    }
+    a { color: inherit; text-decoration: none; }
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 7vw;
+      border-bottom: 1px solid rgba(201,168,108,0.18);
+    }
+    .logo {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: 22px;
+      color: var(--gold);
+    }
+    .site-nav ul {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--mute);
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      padding: 72px 7vw 80px;
+      align-items: center;
+    }
+    .eyebrow {
+      color: var(--gold);
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+    h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
+      font-size: clamp(56px, 8vw, 112px);
+      line-height: 0.88;
+      margin: 16px 0 24px;
+    }
+    h1 em { font-style: italic; color: var(--gold); }
+    .hero p {
+      max-width: 460px;
+      color: var(--mute);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .btn {
+      border: 1px solid var(--gold);
+      padding: 12px 22px;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .btn.solid { background: var(--gold); color: #1a120c; }
+    .vinyl-wrap { display: grid; place-items: center; position: relative; }
+    .vinyl {
+      width: min(360px, 70vw);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 50%, #c9a86c 0 14%, #1b1b1b 15% 18%, transparent 19%),
+        repeating-conic-gradient(#111 0 2deg, #1c1c1c 2deg 4deg);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.55);
+      animation: spin 18s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    section { padding: 24px 7vw 88px; }
+    .section-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 42px;
+      font-weight: 400;
+      margin-bottom: 28px;
+    }
+    .artists {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .artist {
+      background: var(--panel);
+      min-height: 280px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border: 1px solid rgba(201,168,108,0.12);
+      position: relative;
+      overflow: hidden;
+    }
+    .artist::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.9;
+    }
+    .a1::before { background: linear-gradient(180deg, transparent 20%, #09080b), radial-gradient(circle at 40% 30%, #6a3a4e, #1a1016); }
+    .a2::before { background: linear-gradient(180deg, transparent 20%, #09080b), radial-gradient(circle at 60% 20%, #3d4a5a, #101318); }
+    .a3::before { background: linear-gradient(180deg, transparent 20%, #09080b), radial-gradient(circle at 50% 40%, #5a4630, #16110c); }
+    .artist h3, .artist p { position: relative; }
+    .artist h3 { font-family: "Cormorant Garamond", serif; font-size: 28px; }
+    .artist p { color: var(--mute); font-size: 13px; margin-top: 6px; }
+    .dream {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+      background: linear-gradient(90deg, #120f16, #1c1520);
+      padding: 56px 7vw;
+      margin: 0 0 24px;
+      border-top: 1px solid rgba(201,168,108,0.2);
+      border-bottom: 1px solid rgba(201,168,108,0.2);
+    }
+    .phone {
+      width: 220px;
+      height: 420px;
+      border: 8px solid #2a2430;
+      border-radius: 32px;
+      margin-left: auto;
+      background: linear-gradient(#1e1724, #0d0b10);
+      padding: 28px 18px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+    }
+    .phone .app-name {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      color: var(--gold);
+      font-size: 28px;
+    }
+    .feed { margin-top: 24px; display: grid; gap: 10px; }
+    .feed div {
+      height: 54px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,168,108,0.15);
+      border-radius: 8px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .service {
+      border: 1px solid rgba(201,168,108,0.25);
+      padding: 32px;
+    }
+    .service h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 32px;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .service p { color: var(--mute); line-height: 1.6; }
+    footer {
+      padding: 28px 7vw 48px;
+      color: var(--mute);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid rgba(201,168,108,0.12);
+    }
+    @media (max-width: 860px) {
+      .hero, .artists, .dream, .services, .site-nav ul { grid-template-columns: 1fr; display: grid; }
+      .site-nav { flex-direction: column; gap: 12px; align-items: flex-start; }
+      .site-nav ul { display: flex; flex-wrap: wrap; gap: 14px; }
+      .phone { margin: 24px auto 0; }
+      footer { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="isr-switcher">
+    <a class="back" href="../index.html">All styles</a>
+    <span class="label">Style 01 · Midnight Vinyl</span>
+    <nav>
+      <a class="active" href="midnight-vinyl.html">1</a>
+      <a href="paper-zine.html">2</a>
+      <a href="cassette-club.html">3</a>
+      <a href="catalog-archive.html">4</a>
+      <a href="hearth-stage.html">5</a>
+    </nav>
+  </div>
+
+  <header class="site-nav">
+    <a class="logo" href="#">Inner Soul Record</a>
+    <ul>
+      <li><a href="#artists">Artists</a></li>
+      <li><a href="#dreamin">Dreamin’ Indie</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Mini indie label</p>
+      <h1>Music for the <em>inner hours.</em></h1>
+      <p>A small roster, carefully chosen. Inner Soul Record publishes songs, books the room, and hosts Dreamin’ Indie — a community for people who still listen all the way through.</p>
+      <div class="hero-actions">
+        <a class="btn solid" href="#artists">Meet the singers</a>
+        <a class="btn" href="#dreamin">Enter Dreamin’ Indie</a>
+      </div>
+    </div>
+    <div class="vinyl-wrap"><div class="vinyl" aria-hidden="true"></div></div>
+  </section>
+
+  <section id="artists">
+    <h2 class="section-title">The roster</h2>
+    <div class="artists">
+      <article class="artist a1">
+        <h3>Luna Vess</h3>
+        <p>Dream-pop · Soft Static EP</p>
+      </article>
+      <article class="artist a2">
+        <h3>Arden Hollow</h3>
+        <p>Bedroom folk · Inner Weather</p>
+      </article>
+      <article class="artist a3">
+        <h3>NOCTURNE</h3>
+        <p>Indie electronic · Afterglow</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="dream" id="dreamin">
+    <div>
+      <p class="eyebrow">Community app</p>
+      <h2 class="section-title">Dreamin’ Indie</h2>
+      <p style="color:var(--mute);max-width:480px;line-height:1.7;">Our listening room, in your pocket. Share demos, find house shows, and sit with other indie heads who care about the song more than the algorithm.</p>
+      <div class="hero-actions">
+        <a class="btn solid" href="#">Get the app</a>
+      </div>
+    </div>
+    <div class="phone">
+      <div class="app-name">Dreamin’ Indie</div>
+      <p style="color:var(--mute);font-size:12px;margin-top:8px;">Tonight’s listening circle</p>
+      <div class="feed"><div></div><div></div><div></div><div></div></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2 class="section-title">What we do</h2>
+    <div class="services">
+      <article class="service">
+        <h3>Music publishing</h3>
+        <p>Rights, splits, and a catalog that stays with the people who wrote it. We place songs and keep the paperwork as quiet as the mix.</p>
+      </article>
+      <article class="service">
+        <h3>Live performances</h3>
+        <p>House shows, listening rooms, and small stages. We book the night so the singer can stay inside the song.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <span>Inner Soul Record</span>
+    <span>hello@innersoulrecord.example</span>
+  </footer>
+</body>
+</html>

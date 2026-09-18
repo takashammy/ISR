@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inner Soul Record — Catalog Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@96,400;96,600;112,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/switcher.css" />
+  <style>
+    :root {
+      --paper: #efeee9;
+      --ink: #111;
+      --red: #e10600;
+      --rule: #111;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 14px;
+    }
+    a { color: inherit; }
+    .frame { margin: 16px 24px 48px; border: 1px solid var(--ink); }
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      border-bottom: 1px solid var(--ink);
+    }
+    .brand {
+      padding: 18px 20px;
+      border-right: 1px solid var(--ink);
+    }
+    .brand small {
+      display: block;
+      letter-spacing: 0.16em;
+      font-size: 11px;
+    }
+    .brand h1 {
+      font-family: "Archivo", sans-serif;
+      font-weight: 500;
+      font-stretch: 112%;
+      font-size: clamp(36px, 6vw, 64px);
+      letter-spacing: -0.04em;
+      line-height: 0.95;
+      margin-top: 8px;
+    }
+    .index {
+      min-width: 260px;
+      padding: 18px 20px;
+    }
+    .index ol { list-style: none; }
+    .index li { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #ccc; }
+    .index a { text-decoration: none; }
+    .hero {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      border-bottom: 1px solid var(--ink);
+    }
+    .hero > div { padding: 28px 20px; }
+    .hero > div + div { border-left: 1px solid var(--ink); }
+    .num {
+      color: var(--red);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+    }
+    .hero h2 {
+      font-family: "Archivo", sans-serif;
+      font-stretch: 112%;
+      font-size: 28px;
+      font-weight: 500;
+      margin: 12px 0;
+      letter-spacing: -0.03em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: left;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--ink);
+      vertical-align: top;
+    }
+    th {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      background: #e4e3dd;
+    }
+    tr:hover td { background: #e7e6e0; }
+    .cat { color: var(--red); }
+    .block {
+      display: grid;
+      grid-template-columns: 160px 1fr 1fr;
+      border-bottom: 1px solid var(--ink);
+    }
+    .block > * { padding: 28px 20px; }
+    .block > * + * { border-left: 1px solid var(--ink); }
+    .block h3 {
+      font-family: "Archivo", sans-serif;
+      font-stretch: 112%;
+      font-size: 26px;
+      font-weight: 500;
+    }
+    .label-col {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      letter-spacing: 0.22em;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 16px;
+      background: var(--ink);
+      color: var(--paper);
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+    footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 20px;
+      font-size: 12px;
+    }
+    @media (max-width: 860px) {
+      .frame { margin: 12px; }
+      header, .hero, .block { grid-template-columns: 1fr; }
+      .brand, .hero > div + div, .block > * + * { border-right: 0; border-left: 0; border-top: 1px solid var(--ink); }
+      .label-col { writing-mode: horizontal-tb; transform: none; }
+      table { font-size: 12px; }
+      th, td { padding: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="isr-switcher">
+    <a class="back" href="../index.html">All styles</a>
+    <span class="label">Style 04 · Catalog Archive</span>
+    <nav>
+      <a href="midnight-vinyl.html">1</a>
+      <a href="paper-zine.html">2</a>
+      <a href="cassette-club.html">3</a>
+      <a class="active" href="catalog-archive.html">4</a>
+      <a href="hearth-stage.html">5</a>
+    </nav>
+  </div>
+
+  <div class="frame">
+    <header>
+      <div class="brand">
+        <small>ISR / CAT. 0001 / EST. INDIE</small>
+        <h1>Inner Soul Record</h1>
+      </div>
+      <nav class="index">
+        <small style="letter-spacing:0.16em;">CONTENTS</small>
+        <ol>
+          <li><a href="#artists"><span>01 Artists</span><span>003</span></a></li>
+          <li><a href="#dreamin"><span>02 Dreamin’ Indie</span><span>014</span></a></li>
+          <li><a href="#services"><span>03 Services</span><span>022</span></a></li>
+        </ol>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="num">STATEMENT</div>
+        <h2>A compact catalog of singers, rights, and nights.</h2>
+        <p>Mini label. Clear index. Every artist, every work, every live date filed where it can be found.</p>
+      </div>
+      <div>
+        <div class="num">STATUS</div>
+        <p>Active roster: 3<br />Works in catalog: 11<br />App: Dreamin’ Indie</p>
+      </div>
+      <div>
+        <div class="num">CONTACT</div>
+        <p>hello@innersoulrecord.example<br />Publishing / Booking</p>
+      </div>
+    </section>
+
+    <section id="artists">
+      <table>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Artist</th>
+            <th>Form</th>
+            <th>Current work</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cat">001</td>
+            <td>Luna Vess</td>
+            <td>Voice / dream-pop</td>
+            <td>Soft Static EP</td>
+          </tr>
+          <tr>
+            <td class="cat">002</td>
+            <td>Arden Hollow</td>
+            <td>Voice / folk</td>
+            <td>Inner Weather</td>
+          </tr>
+          <tr>
+            <td class="cat">003</td>
+            <td>NOCTURNE</td>
+            <td>Voice / electronic</td>
+            <td>Afterglow</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="block" id="dreamin">
+      <div class="label-col">Product 02</div>
+      <div>
+        <div class="num">COMMUNITY APPLICATION</div>
+        <h3>Dreamin’ Indie</h3>
+        <p style="margin-top:12px;line-height:1.5;">Indexed community for listeners and makers: demo exchange, listening sessions, show listings. Operated under Inner Soul Record.</p>
+        <a class="cta" href="#">Access application</a>
+      </div>
+      <div>
+        <p>REF / DI-01<br /><br />Listen<br />Share<br />Attend</p>
+      </div>
+    </section>
+
+    <section class="block" id="services">
+      <div class="label-col">Services</div>
+      <div>
+        <div class="num">04A</div>
+        <h3>Music publishing</h3>
+        <p style="margin-top:12px;line-height:1.5;">Registration, splits, and catalog administration for writers on the roster and affiliated works.</p>
+      </div>
+      <div>
+        <div class="num">04B</div>
+        <h3>Live performances</h3>
+        <p style="margin-top:12px;line-height:1.5;">Booking and production of listening-room dates, support slots, and label showcases.</p>
+      </div>
+    </section>
+
+    <footer>
+      <span>ISR ARCHIVE — NOT A FINAL BUILD</span>
+      <span>PAGE 1 / 1</span>
+    </footer>
+  </div>
+</body>
+</html>

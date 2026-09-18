@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inner Soul Record — Hearth Stage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=DM+Sans:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/switcher.css" />
+  <style>
+    :root {
+      --ember: #3a1d12;
+      --clay: #c56a3a;
+      --cream: #f6e6cf;
+      --moss: #2f4a38;
+      --ticket: #f8efe3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--cream);
+      color: var(--ember);
+      font-family: "DM Sans", sans-serif;
+      background-image:
+        radial-gradient(circle at 20% 10%, rgba(197,106,58,0.18), transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(47,74,56,0.12), transparent 40%);
+    }
+    a { color: inherit; text-decoration: none; }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 6vw;
+    }
+    .logo {
+      font-family: "Fraunces", serif;
+      font-style: italic;
+      font-size: 24px;
+    }
+    .nav ul {
+      display: flex;
+      gap: 22px;
+      list-style: none;
+      font-size: 14px;
+    }
+    .hero {
+      padding: 20px 6vw 48px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+    }
+    h1 {
+      font-family: "Fraunces", serif;
+      font-weight: 500;
+      font-size: clamp(44px, 7vw, 84px);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+    }
+    .hand {
+      font-family: "Caveat", cursive;
+      color: var(--clay);
+      font-size: 28px;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .hero p { font-size: 18px; line-height: 1.6; margin-top: 16px; max-width: 480px; }
+    .ticket {
+      background: var(--ticket);
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 12px 16px 0 var(--ember);
+      transform: rotate(3deg);
+    }
+    .ticket small {
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 11px;
+      color: var(--moss);
+    }
+    .ticket h2 {
+      font-family: "Fraunces", serif;
+      font-size: 32px;
+      margin: 8px 0 12px;
+    }
+    .ticket ul { list-style: none; line-height: 1.8; }
+    .btn {
+      display: inline-block;
+      margin-top: 24px;
+      background: var(--ember);
+      color: var(--cream);
+      padding: 12px 20px;
+      border-radius: 999px;
+    }
+    .artists {
+      padding: 10px 6vw 64px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .polaroid {
+      background: #fff;
+      padding: 12px 12px 20px;
+      box-shadow: 0 12px 30px rgba(58,29,18,0.12);
+    }
+    .polaroid:nth-child(1) { transform: rotate(-2deg); }
+    .polaroid:nth-child(2) { transform: rotate(1.5deg); margin-top: 24px; }
+    .polaroid:nth-child(3) { transform: rotate(-1deg); }
+    .photo {
+      height: 180px;
+      margin-bottom: 12px;
+    }
+    .p1 { background: linear-gradient(160deg, #e8b089, #8a3d2a); }
+    .p2 { background: linear-gradient(160deg, #d7e0c8, #3f5a44); }
+    .p3 { background: linear-gradient(160deg, #d9c4a5, #4a3428); }
+    .polaroid h3 { font-family: "Fraunces", serif; font-size: 22px; }
+    .polaroid p { font-size: 13px; opacity: 0.75; }
+    .community {
+      margin: 0 6vw 64px;
+      background: var(--moss);
+      color: var(--cream);
+      border-radius: 28px;
+      padding: 42px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+    }
+    .community h2 {
+      font-family: "Fraunces", serif;
+      font-size: 42px;
+      font-weight: 500;
+    }
+    .community .hand { color: #e7c9a4; }
+    .pill {
+      display: inline-block;
+      margin-top: 20px;
+      background: var(--cream);
+      color: var(--ember);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 500;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      padding: 0 6vw 72px;
+    }
+    .services article {
+      background: #fff6ea;
+      padding: 28px;
+      border-radius: 18px;
+      border: 1px solid rgba(58,29,18,0.12);
+    }
+    .services h3 {
+      font-family: "Fraunces", serif;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    footer {
+      padding: 0 6vw 40px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+    @media (max-width: 860px) {
+      .hero, .artists, .community, .services { grid-template-columns: 1fr; }
+      .nav { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .polaroid { transform: none !important; margin-top: 0 !important; }
+      .ticket { transform: none; }
+      footer { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="isr-switcher">
+    <a class="back" href="../index.html">All styles</a>
+    <span class="label">Style 05 · Hearth Stage</span>
+    <nav>
+      <a href="midnight-vinyl.html">1</a>
+      <a href="paper-zine.html">2</a>
+      <a href="cassette-club.html">3</a>
+      <a href="catalog-archive.html">4</a>
+      <a class="active" href="hearth-stage.html">5</a>
+    </nav>
+  </div>
+
+  <header class="nav">
+    <a class="logo" href="#">Inner Soul Record</a>
+    <ul>
+      <li><a href="#artists">Singers</a></li>
+      <li><a href="#dreamin">Dreamin’ Indie</a></li>
+      <li><a href="#services">Services</a></li>
+    </ul>
+  </header>
+
+  <section class="hero">
+    <div>
+      <span class="hand">come in, leave your coat</span>
+      <h1>Songs around the table.</h1>
+      <p>Inner Soul is a mini indie label that still believes in rooms. We look after singers, publish the work, and keep a standing invitation to the next live night.</p>
+      <a class="btn" href="#artists">Meet the house</a>
+    </div>
+    <aside class="ticket">
+      <small>Tonight’s board</small>
+      <h2>Living room, 8pm</h2>
+      <ul>
+        <li>Luna Vess — Soft Static</li>
+        <li>Arden Hollow — two new songs</li>
+        <li>NOCTURNE — closer</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section class="artists" id="artists">
+    <article class="polaroid">
+      <div class="photo p1"></div>
+      <h3>Luna Vess</h3>
+      <p>Dream-pop, late light</p>
+    </article>
+    <article class="polaroid">
+      <div class="photo p2"></div>
+      <h3>Arden Hollow</h3>
+      <p>Folk from the kitchen</p>
+    </article>
+    <article class="polaroid">
+      <div class="photo p3"></div>
+      <h3>NOCTURNE</h3>
+      <p>Quiet electronics</p>
+    </article>
+  </section>
+
+  <section class="community" id="dreamin">
+    <div>
+      <span class="hand">our other house</span>
+      <h2>Dreamin’ Indie</h2>
+      <p style="margin-top:12px;max-width:480px;line-height:1.6;">The community app under the label. Bring a demo, stay for the listening circle, find a show that still has chairs left.</p>
+      <a class="pill" href="#">Come sit with us</a>
+    </div>
+    <div>
+      <p style="line-height:1.8;">This week:<br />· Thursday listening circle<br />· Demo potluck<br />· Sunday house-show map</p>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <article>
+      <h3>Music publishing</h3>
+      <p>We keep the songs in the family — registered, split, and ready if they wander into the world.</p>
+    </article>
+    <article>
+      <h3>Live performances</h3>
+      <p>House shows and small halls. We set the lights, the kettle, and the set times.</p>
+    </article>
+  </section>
+
+  <footer>
+    <span>Inner Soul Record · always a spare chair</span>
+    <span>hello@innersoulrecord.example</span>
+  </footer>
+</body>
+</html>
