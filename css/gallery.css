@@ -1,0 +1,280 @@
+:root {
+  --ink: #14110e;
+  --paper: #f3eee6;
+  --muted: #6b645b;
+  --line: #d9d0c4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Instrument Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+.kicker {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(42px, 7vw, 84px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin: 12px 0 20px;
+}
+
+.lede {
+  max-width: 640px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: #3c372f;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin: 28px 0 48px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  gap: 22px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  min-height: 280px;
+  border: 1px solid var(--ink);
+  overflow: hidden;
+  text-decoration: none;
+  background: #fffdf8;
+}
+
+.card:hover .preview {
+  transform: scale(1.03);
+}
+
+.preview {
+  min-height: 240px;
+  transition: transform 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.info {
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--ink);
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.info h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 8px 0 12px;
+  letter-spacing: -0.03em;
+}
+
+.info p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #3f3a33;
+  flex: 1;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.chip {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.cta {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+/* Preview palettes */
+.p1 {
+  background: radial-gradient(circle at 30% 20%, #3a2433, #0b0a0d 62%);
+}
+.p1::after {
+  content: "INNER SOUL";
+  position: absolute;
+  left: 24px;
+  bottom: 28px;
+  color: #e6c98a;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: 42px;
+  letter-spacing: -0.03em;
+}
+.p1 .disc {
+  position: absolute;
+  right: -40px;
+  top: 18px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: conic-gradient(#1a1a1a, #444, #111, #555, #1a1a1a);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+.p1 .disc::after {
+  content: "";
+  position: absolute;
+  inset: 78px;
+  border-radius: 50%;
+  background: #c9a86c;
+}
+
+.p2 {
+  background: repeating-linear-gradient(
+    0deg,
+    #f7f1e6,
+    #f7f1e6 24px,
+    #efe6d6 25px
+  );
+}
+.p2 .mast {
+  position: absolute;
+  inset: 24px;
+  border: 1.5px solid #1c1914;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+}
+.p2 .mast b {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 28px;
+  font-weight: 500;
+}
+.p2 .mast span {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.p3 {
+  background: #07040f;
+  background-image: linear-gradient(135deg, #ff2d95 0 12%, transparent 12% 88%, #00eaff 88%);
+}
+.p3 .stack {
+  position: absolute;
+  left: 20px;
+  top: 22px;
+  color: #fff;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: 64px;
+  line-height: 0.8;
+  letter-spacing: 0.02em;
+}
+
+.p4 {
+  background: #efeee9;
+}
+.p4 .rules {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(#111 1px, transparent 1px) 0 0 / 100% 36px,
+    linear-gradient(90deg, #111 1px, transparent 1px) 0 0 / 36px 100%;
+  opacity: 0.18;
+}
+.p4 .big {
+  position: absolute;
+  left: 20px;
+  bottom: 16px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+}
+
+.p5 {
+  background: linear-gradient(180deg, #f3d7b5 0%, #c56a3a 55%, #3a1d12 100%);
+}
+.p5 .ticket {
+  position: absolute;
+  left: 28px;
+  top: 36px;
+  width: 180px;
+  background: #f8efe3;
+  padding: 16px;
+  transform: rotate(-8deg);
+  box-shadow: 8px 12px 0 #2a160f;
+}
+.p5 .ticket small {
+  display: block;
+  letter-spacing: 0.16em;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.p5 .ticket b {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 22px;
+}
+
+.note {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  max-width: 640px;
+  line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+  .info {
+    border-left: 0;
+    border-top: 1px solid var(--ink);
+  }
+}

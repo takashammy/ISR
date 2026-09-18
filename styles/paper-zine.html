@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inner Soul Record — Paper Zine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=IBM+Plex+Sans:wght@400;500&family=Instrument+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/switcher.css" />
+  <style>
+    :root {
+      --paper: #f4eee3;
+      --ink: #1c1914;
+      --rust: #c45c26;
+      --sage: #6f7d5e;
+      --rule: #d8cbb8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Newsreader", Georgia, serif;
+      background-image: radial-gradient(rgba(28,25,20,0.04) 0.7px, transparent 0.7px);
+      background-size: 7px 7px;
+    }
+    a { color: inherit; text-decoration: none; }
+    .masthead {
+      border-bottom: 3px solid var(--ink);
+      margin: 18px 5vw 0;
+      padding-bottom: 10px;
+    }
+    .mast-top {
+      display: flex;
+      justify-content: space-between;
+      font-family: "Instrument Sans", sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-family: "Fraunces", serif;
+      font-weight: 400;
+      font-size: clamp(48px, 9vw, 108px);
+      line-height: 0.86;
+      letter-spacing: -0.04em;
+      text-align: center;
+      padding: 18px 0 8px;
+    }
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      font-family: "Instrument Sans", sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding: 10px;
+      margin: 0 5vw 28px;
+    }
+    .lead {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 36px;
+      margin: 0 5vw 48px;
+    }
+    .lead p {
+      font-size: 22px;
+      line-height: 1.45;
+    }
+    .lead aside {
+      border-left: 3px solid var(--rust);
+      padding-left: 18px;
+      font-family: "Instrument Sans", sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .lead aside strong { color: var(--rust); display: block; margin-bottom: 8px; letter-spacing: 0.12em; text-transform: uppercase; font-size: 11px; }
+    .features {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 18px;
+      margin: 0 5vw 56px;
+    }
+    .feature {
+      border: 1.5px solid var(--ink);
+      min-height: 320px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .feature.big { background: #eadfcb; }
+    .swatch {
+      height: 160px;
+      margin: -18px -18px 16px;
+      border-bottom: 1.5px solid var(--ink);
+    }
+    .s1 { background: linear-gradient(135deg, #c45c26, #f0c9a0); }
+    .s2 { background: linear-gradient(135deg, #6f7d5e, #d5ddc8); }
+    .s3 { background: linear-gradient(135deg, #2d3a4a, #9fb0c4); }
+    .feature h3 {
+      font-family: "Fraunces", serif;
+      font-size: 28px;
+      font-weight: 400;
+    }
+    .feature .tag {
+      font-family: "Instrument Sans", sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rust);
+    }
+    .insert {
+      margin: 0 5vw 56px;
+      border: 2px dashed var(--ink);
+      padding: 36px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      background: #fffaf1;
+      position: relative;
+    }
+    .sticker {
+      position: absolute;
+      right: 28px;
+      top: -18px;
+      background: var(--rust);
+      color: #fffaf1;
+      font-family: "Instrument Sans", sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 8px 14px;
+      transform: rotate(3deg);
+    }
+    .insert h2 {
+      font-family: "Fraunces", serif;
+      font-size: 42px;
+      font-weight: 400;
+      font-style: italic;
+    }
+    .insert p { font-size: 18px; line-height: 1.5; margin-top: 12px; }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      font-family: "Instrument Sans", sans-serif;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 12px;
+      border-bottom: 2px solid var(--rust);
+      padding-bottom: 4px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin: 0 5vw 64px;
+      border-top: 2px solid var(--ink);
+      border-bottom: 2px solid var(--ink);
+    }
+    .services article {
+      padding: 32px;
+    }
+    .services article:first-child { border-right: 1.5px solid var(--ink); }
+    .services h3 {
+      font-family: "Fraunces", serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: var(--sage);
+      margin-bottom: 10px;
+    }
+    footer {
+      margin: 0 5vw 40px;
+      display: flex;
+      justify-content: space-between;
+      font-family: "Instrument Sans", sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-top: 3px double var(--ink);
+      padding-top: 16px;
+    }
+    @media (max-width: 860px) {
+      .lead, .features, .insert, .services { grid-template-columns: 1fr; }
+      .services article:first-child { border-right: 0; border-bottom: 1.5px solid var(--ink); }
+      .nav { flex-wrap: wrap; gap: 12px; }
+      footer { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="isr-switcher">
+    <a class="back" href="../index.html">All styles</a>
+    <span class="label">Style 02 · Paper Zine</span>
+    <nav>
+      <a href="midnight-vinyl.html">1</a>
+      <a class="active" href="paper-zine.html">2</a>
+      <a href="cassette-club.html">3</a>
+      <a href="catalog-archive.html">4</a>
+      <a href="hearth-stage.html">5</a>
+    </nav>
+  </div>
+
+  <header class="masthead">
+    <div class="mast-top">
+      <span>Vol. 01 · Independent press</span>
+      <span>Artists · App · Publishing · Live</span>
+    </div>
+    <h1>Inner Soul Record</h1>
+  </header>
+  <nav class="nav">
+    <a href="#artists">The singers</a>
+    <a href="#dreamin">Dreamin’ Indie</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Write to us</a>
+  </nav>
+
+  <section class="lead">
+    <p>A mini label for songs that still feel handwritten. We sign singers, publish the catalog, and put them in rooms small enough to hear the breath between verses.</p>
+    <aside>
+      <strong>In this issue</strong>
+      Three artists on the roster, a pull-out on Dreamin’ Indie, plus how we book nights and look after the rights.
+    </aside>
+  </section>
+
+  <section class="features" id="artists">
+    <article class="feature big">
+      <div>
+        <div class="swatch s1"></div>
+        <p class="tag">Cover story</p>
+        <h3>Luna Vess learns to leave space</h3>
+      </div>
+      <p>The Soft Static EP is out now — a hush of guitar and a voice that never over-explains.</p>
+    </article>
+    <article class="feature">
+      <div>
+        <div class="swatch s2"></div>
+        <p class="tag">Folk</p>
+        <h3>Arden Hollow</h3>
+      </div>
+      <p>Kitchen-table songs from Inner Weather.</p>
+    </article>
+    <article class="feature">
+      <div>
+        <div class="swatch s3"></div>
+        <p class="tag">Electronic</p>
+        <h3>NOCTURNE</h3>
+      </div>
+      <p>Afterglow: late buses and neon puddles.</p>
+    </article>
+  </section>
+
+  <section class="insert" id="dreamin">
+    <span class="sticker">Special insert</span>
+    <div>
+      <h2>Dreamin’ Indie</h2>
+      <p>The community app under our roof. Listen together, drop a demo, find the next living-room show. Less feed, more scene.</p>
+      <a class="btn" href="#">Open the community</a>
+    </div>
+    <div>
+      <p style="font-family:'Instrument Sans',sans-serif;font-size:14px;line-height:1.6;">
+        <strong>This week inside the app</strong><br /><br />
+        · Listening circle: Soft Static, start to finish<br />
+        · Demo drop: 12 new sketches from members<br />
+        · Show board: three house nights this month
+      </p>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <article>
+      <h3>Music publishing</h3>
+      <p>We register the work, split it fairly, and keep a small catalog that still belongs to the writers in the room.</p>
+    </article>
+    <article>
+      <h3>Live performances</h3>
+      <p>From parlours to tiny halls. We produce nights that feel like an issue of a zine you can walk into.</p>
+    </article>
+  </section>
+
+  <footer id="contact">
+    <span>Inner Soul Record · Printed in the evening</span>
+    <span>hello@innersoulrecord.example</span>
+  </footer>
+</body>
+</html>
