@@ -329,7 +329,7 @@
     }
     .marquee span {
       font-family: var(--font-sans);
-      font-size: 0.68rem;
+      font-size: 1.36rem;
       font-weight: 400;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -612,6 +612,14 @@
       color: var(--text-muted);
       line-height: 1.7;
     }
+    .playbill-col .pkg-price {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      font-weight: 500;
+      color: var(--rouge-light);
+      margin-bottom: 0.65rem;
+      line-height: 1.1;
+    }
     .liner-notes {
       margin-top: 3.5rem;
       padding: 2rem;
@@ -634,6 +642,59 @@
       margin-bottom: 0.55rem;
     }
     .liner-notes .highlight { color: var(--rouge-light); font-style: italic; }
+
+    /* Services — from Dreamin' Indie (excl. Music publishing) */
+    #services {
+      background: var(--ink);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      margin-top: 0.5rem;
+    }
+    .service-card {
+      padding: 1.75rem 1.5rem 1.85rem;
+      border: 1px solid var(--rule-faint);
+      background: var(--charcoal);
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .service-card:hover {
+      border-color: rgba(183, 28, 58, 0.28);
+      box-shadow: var(--shadow-rouge);
+      transform: translateY(-2px);
+    }
+    .service-kicker {
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rouge);
+      margin-bottom: 0.75rem;
+    }
+    .service-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: var(--silver);
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+    .service-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+    .service-cta {
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--silver-soft);
+      border-bottom: 1px solid rgba(183, 28, 58, 0.45);
+      padding-bottom: 0.15rem;
+    }
 
     /* Live — editorial playbill */
     #live {
@@ -778,6 +839,7 @@
       .hero-side-label { display: none; }
       .dreamin-layout { grid-template-columns: 1fr; gap: 2.5rem; }
       .playbill-columns { grid-template-columns: 1fr; gap: 2.5rem; }
+      .services-grid { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
       .footer-inner { grid-template-columns: 1fr; }
       .roster-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -788,6 +850,9 @@
       .roster-grid {
         grid-template-columns: 1fr;
         gap: 1.75rem;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
       }
       .roster-note {
         opacity: 1;
