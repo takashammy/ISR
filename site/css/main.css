@@ -85,23 +85,20 @@
       border-bottom-color: var(--rule);
     }
     .logo {
-      font-family: var(--font-serif);
-      font-size: 1.1rem;
-      font-weight: 500;
-      font-style: italic;
-      letter-spacing: 0.01em;
-      color: var(--silver);
       text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      flex-shrink: 0;
     }
-    .logo-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--rouge);
-      box-shadow: 0 0 8px var(--rouge-glow);
+    .logo-img {
+      display: block;
+      height: 6.75rem;
+      width: auto;
+      opacity: 0.96;
+      transition: opacity 0.25s ease;
+    }
+    .logo:hover .logo-img {
+      opacity: 1;
     }
     .nav-links {
       display: flex;
@@ -111,7 +108,7 @@
     }
     .nav-links a {
       font-family: var(--font-sans);
-      font-size: 0.68rem;
+      font-size: 1.36rem;
       font-weight: 400;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -133,7 +130,7 @@
     }
     .nav-meta {
       font-family: var(--font-sans);
-      font-size: 0.62rem;
+      font-size: 1.24rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--text-faint);
@@ -241,8 +238,8 @@
     }
     .turntable {
       position: relative;
-      width: min(380px, 85vw);
-      height: min(380px, 85vw);
+      width: min(494px, 85vw);
+      height: min(494px, 85vw);
     }
     .platter {
       position: absolute;
@@ -285,30 +282,19 @@
         var(--rouge-deep) 52%,
         #1a080e 100%);
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
       box-shadow: inset 0 0 16px rgba(0,0,0,0.35);
     }
-    .label-disc::after {
-      content: '';
-      width: 8%;
-      height: 8%;
-      border-radius: 50%;
-      background: var(--ink);
-      box-shadow: inset 0 0 3px rgba(0,0,0,0.6);
+    .label-logo {
+      width: 70%;
+      height: auto;
+      max-height: 55%;
+      object-fit: contain;
+      opacity: 0.96;
+      pointer-events: none;
     }
-    .label-disc span {
-      position: absolute;
-      font-family: var(--font-sans);
-      font-size: 0.52rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--silver-soft);
-      opacity: 0.9;
-    }
-    .label-disc .isr { top: 28%; }
-    .label-disc .side { bottom: 28%; color: var(--silver-soft); }
     .tonearm {
       position: absolute;
       top: 5%;
