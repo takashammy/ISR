@@ -108,7 +108,7 @@
     }
     .nav-links a {
       font-family: var(--font-sans);
-      font-size: 0.68rem;
+      font-size: 1.36rem;
       font-weight: 400;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -882,7 +882,7 @@
         justify-content: center;
         z-index: 600;
       }
-      .nav-links.open a { font-size: 0.85rem; padding: 1rem 2rem; }
+      .nav-links.open a { font-size: 1.7rem; padding: 1rem 2rem; }
       section { padding: 4rem 1.25rem; }
       .live-entry {
         grid-template-columns: 1fr;
