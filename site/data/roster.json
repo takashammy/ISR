@@ -1,0 +1,24 @@
+{
+  "artists": [
+    {
+      "id": "martin",
+      "name": "Martin Sham",
+      "genre": "Hip-hop",
+      "catalogNumber": "ISR-001",
+      "side": "A · 01",
+      "note": "Runs Inner Soul Records. Looking after the roster and the app.",
+      "latestRelease": "一族夜鬼",
+      "image": "assets/artists/martin.jpg"
+    },
+    {
+      "id": "sinlam",
+      "name": "SIN 林善麟",
+      "genre": "Indie",
+      "catalogNumber": "ISR-002",
+      "side": "A · 02",
+      "note": "SIN 林善麟是香港獨立音樂人，曾參與由小克、王雙駿發起的音樂企劃《樂壇已死》而為人熟知，並於 2025 年發表首支個人單曲《成人的道別方式》正式出道。近年活躍於本地獨立音樂圈, 並經營個人YouTube Channel發表音樂作品。",
+      "latestRelease": "暖戰 | Warm War",
+      "image": "assets/artists/sinlam.jpg"
+    }
+  ]
+}
