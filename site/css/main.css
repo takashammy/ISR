@@ -116,17 +116,26 @@
       text-decoration: none;
       padding: 0.45rem 0.85rem;
       border: 1px solid transparent;
-      transition: color 0.25s, border-color 0.25s;
+      text-shadow:
+        0 0 8px rgba(183, 28, 58, 0.088),
+        0 0 12px rgba(212, 212, 216, 0.044);
+      transition: color 0.25s, border-color 0.25s, text-shadow 0.25s, box-shadow 0.25s;
     }
     .nav-links a:hover {
       color: var(--silver-soft);
       border-color: var(--rule-faint);
-      box-shadow: inset 0 -1px 0 var(--rouge-soft);
+      text-shadow:
+        0 0 10px rgba(183, 28, 58, 0.132),
+        0 0 14px rgba(212, 212, 216, 0.055);
+      box-shadow:
+        inset 0 -1px 0 rgba(183, 28, 58, 0.154),
+        0 0 13.2px rgba(183, 28, 58, 0.154);
     }
     .nav-links a span.num {
       color: var(--rouge);
       margin-right: 0.4rem;
       font-weight: 500;
+      text-shadow: 0 0 6px rgba(183, 28, 58, 0.165);
     }
     .nav-meta {
       font-family: var(--font-sans);
