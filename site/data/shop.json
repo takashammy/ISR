@@ -1,0 +1,14 @@
+[
+  {
+    "id": "ghost-uke",
+    "name": "Ukulele (Electric Acoustic)",
+    "kind": "Electric acoustic ukulele",
+    "series": "Ghost series",
+    "colours": ["Pink Ghost", "White Ghost", "Blue Ghost"],
+    "price": "$420",
+    "woods": "Translucent acrylic",
+    "blurb": "Electric-acoustic ukulele from the Ghost series. Translucent body in Pink Ghost, White Ghost, or Blue Ghost — pick a colour when you enquire.",
+    "photo": "assets/shop/ghost-ukulele.jpg",
+    "source": "Dreamin' Indie · Inner Soul Vibes"
+  }
+]

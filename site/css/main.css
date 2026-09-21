@@ -667,6 +667,21 @@
       background: var(--charcoal);
       transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
     }
+    a.service-card--link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    a.service-card--link:hover .service-cta,
+    a.service-card--link:focus-visible .service-cta {
+      color: var(--rouge-light);
+      border-bottom-color: var(--rouge-light);
+    }
+    a.service-card--link:focus-visible {
+      outline: 1px solid rgba(183, 28, 58, 0.55);
+      outline-offset: 3px;
+    }
     .service-card:hover {
       border-color: rgba(183, 28, 58, 0.28);
       box-shadow: var(--shadow-rouge);
@@ -836,6 +851,129 @@
       color: var(--text-faint);
     }
 
+    /* Shop — Inner Soul Vibes (Dreamin' Indie) */
+    .page-shop .shop-page {
+      padding: 7.5rem 2.5rem 5rem;
+      min-height: 70vh;
+      background:
+        radial-gradient(ellipse 70% 45% at 18% 12%, rgba(183, 28, 58, 0.09), transparent 55%),
+        radial-gradient(ellipse 50% 40% at 88% 78%, rgba(122, 21, 40, 0.08), transparent 50%),
+        var(--ink);
+    }
+    .shop-inner { max-width: 1100px; margin: 0 auto; }
+    .shop-back {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-bottom: 1.75rem;
+      transition: color 0.25s;
+    }
+    .shop-back:hover { color: var(--rouge-light); }
+    .shop-title { margin-bottom: 0.85rem; }
+    .shop-intro { margin-bottom: 2.75rem; }
+    .shop-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .product-card {
+      display: grid;
+      grid-template-columns: minmax(240px, 0.9fr) 1.2fr;
+      gap: 0;
+      border: 1px solid var(--rule-faint);
+      background: var(--charcoal);
+      overflow: hidden;
+      transition: border-color 0.35s, box-shadow 0.35s;
+    }
+    .product-card:hover {
+      border-color: rgba(183, 28, 58, 0.3);
+      box-shadow: var(--shadow-card), var(--shadow-rouge);
+    }
+    .product-photo-wrap {
+      position: relative;
+      background: var(--surface);
+      min-height: 420px;
+      overflow: hidden;
+    }
+    .product-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+      filter: saturate(0.82) contrast(1.06) brightness(0.94);
+      transition: transform 0.55s ease;
+    }
+    .product-card:hover .product-photo {
+      transform: scale(1.03);
+    }
+    .product-body {
+      padding: 2.25rem 2.5rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .product-series {
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rouge);
+    }
+    .product-name {
+      font-family: var(--font-serif);
+      font-size: clamp(1.85rem, 3vw, 2.4rem);
+      font-weight: 500;
+      line-height: 1.15;
+      color: var(--silver);
+      margin: 0.15rem 0 0.35rem;
+    }
+    .product-meta,
+    .product-woods,
+    .product-kind {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .product-woods { font-style: italic; font-family: var(--font-serif); }
+    .product-price {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--rouge-light);
+      margin: 0.65rem 0 0.35rem;
+    }
+    .product-blurb {
+      font-size: 0.98rem;
+      color: var(--silver-soft);
+      line-height: 1.7;
+      max-width: 36rem;
+      margin: 0.5rem 0 1.25rem;
+    }
+    .product-cta {
+      align-self: flex-start;
+      margin-top: auto;
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--silver);
+      background: transparent;
+      border: 1px solid rgba(183, 28, 58, 0.55);
+      padding: 0.85rem 1.5rem;
+      transition: background 0.25s, border-color 0.25s, color 0.25s, box-shadow 0.25s;
+    }
+    .product-cta:hover {
+      color: var(--silver);
+      background: rgba(183, 28, 58, 0.16);
+      border-color: var(--rouge-light);
+      box-shadow: 0 0 18px var(--rouge-soft);
+    }
+
     /* Responsive */
     @media (max-width: 900px) {
       .hero {
@@ -852,6 +990,16 @@
       .roster-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
+      }
+      .product-card {
+        grid-template-columns: 1fr;
+      }
+      .product-photo-wrap {
+        min-height: 320px;
+        aspect-ratio: 3 / 4;
+      }
+      .product-body {
+        padding: 1.75rem 1.5rem 2rem;
       }
     }
     @media (max-width: 600px) {
@@ -893,6 +1041,7 @@
       }
       .nav-links.open a { font-size: 1.09375rem; padding: 1rem 2rem; }
       section { padding: 4rem 1.25rem; }
+      .page-shop .shop-page { padding: 6rem 1.25rem 4rem; }
       .live-entry {
         grid-template-columns: 1fr;
         gap: 0.85rem;
