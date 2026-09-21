@@ -343,7 +343,7 @@
     }
     .marquee {
       display: flex;
-      animation: marquee 80s linear infinite;
+      animation: marquee 53.33s linear infinite;
       white-space: nowrap;
     }
     .marquee span {
