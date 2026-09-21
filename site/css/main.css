@@ -131,6 +131,17 @@
         inset 0 -1px 0 rgba(183, 28, 58, 0.154),
         0 0 13.2px rgba(183, 28, 58, 0.154);
     }
+    .nav-links a.is-active,
+    .nav-links a[aria-current="page"] {
+      color: var(--silver-soft);
+      border-color: var(--rule-faint);
+      text-shadow:
+        0 0 10px rgba(183, 28, 58, 0.132),
+        0 0 14px rgba(212, 212, 216, 0.055);
+      box-shadow:
+        inset 0 -1px 0 rgba(183, 28, 58, 0.22),
+        0 0 13.2px rgba(183, 28, 58, 0.154);
+    }
     .nav-links a span.num {
       color: var(--rouge);
       margin-right: 0.4rem;
