@@ -519,13 +519,16 @@
       font-size: clamp(1.15rem, 2vw, 1.35rem);
       color: var(--silver-soft);
       max-width: 36rem;
-      margin-bottom: 2.75rem;
+      margin-bottom: 1.5rem;
     }
     .dreamin-layout {
       display: grid;
       grid-template-columns: 1fr 1.15fr;
       gap: 4rem;
       align-items: start;
+    }
+    .dreamin-intro .section-title {
+      margin-bottom: 0.85rem;
     }
     .dreamin-lede {
       font-family: var(--font-serif);
