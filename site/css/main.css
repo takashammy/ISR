@@ -249,7 +249,7 @@
     /* Vinyl disc — classic, refined */
     .hero-vinyl {
       position: relative;
-      z-index: 2;
+      z-index: 1;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1203,25 +1203,33 @@
       .site-nav {
         padding: 0.9rem 1.25rem;
       }
+      /* Escape backdrop-filter containing-block trap so the overlay is viewport-fixed
+         and paints above the hero vinyl (platter/tonearm). */
+      .site-nav:has(.nav-links.open) {
+        z-index: 2000;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      }
       .nav-links, .nav-meta { display: none; }
       .nav-toggle {
         display: block;
         position: relative;
-        z-index: 700;
+        z-index: 2100;
       }
       .nav-links.open {
         display: flex;
         flex-direction: column;
         position: fixed;
-        inset: 0;
-        width: 100%;
+        top: 0;
+        left: 0;
+        width: 100vw;
         max-width: 100vw;
-        height: 100%;
+        height: 100dvh;
         max-height: 100dvh;
         background: rgba(6, 6, 7, 0.98);
         align-items: center;
         justify-content: flex-start;
-        z-index: 600;
+        z-index: 2000;
         overflow-x: hidden;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
