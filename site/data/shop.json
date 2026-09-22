@@ -12,5 +12,19 @@
     "photo": "assets/shop/ghost-ukulele.jpg",
     "href": "shop-ghost-ukulele.html",
     "source": "Dreamin' Indie · Inner Soul Vibes"
+  },
+  {
+    "id": "ukumeowmeow-uke",
+    "name": "Ukulele (Electric Acoustic)",
+    "kind": "Electric acoustic ukulele",
+    "series": "Ukumeowmeow series",
+    "colours": ["Midnight Glitter", "Moondust Marble"],
+    "price": "$550",
+    "woods": "Cat-ear body",
+    "previewBlurb": "Cat-ear body in Midnight Glitter or Moondust Marble.",
+    "blurb": "Electric-acoustic ukulele from the Ukumeowmeow series. Cat-ear body in Midnight Glitter or Moondust Marble — pick a colour when you enquire.",
+    "photo": "assets/shop/ukumeowmeow.jpg",
+    "href": "shop-ukumeowmeow-ukulele.html",
+    "source": "Dreamin' Indie · Inner Soul Vibes"
   }
 ]
