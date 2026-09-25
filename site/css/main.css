@@ -822,7 +822,7 @@
     }
     .live-entry {
       display: grid;
-      grid-template-columns: 100px 1fr auto;
+      grid-template-columns: 100px 1fr;
       gap: 2rem;
       align-items: start;
       padding: 2rem 0;
@@ -858,7 +858,7 @@
       font-family: var(--font-serif);
       font-size: 1.35rem;
       font-weight: 500;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0;
       color: var(--silver-soft);
     }
     .live-info p {
